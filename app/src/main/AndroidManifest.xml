@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.valutemonitorwidget">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_widget"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@drawable/ic_widget"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ValuteMonitorWidget">
+
+        <activity
+            android:name="com.valutemonitorwidget.presentation.activities.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".presentation.appwidget.CurrencyListAppWidgetProvider"
+            android:banner="@drawable/ic_widget"
+            android:label="Currency List"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_currency_list_metadata"/>
+        </receiver>
+
+        <receiver android:name=".presentation.appwidget.CurrencyAppWidgetProvider"
+            android:banner="@drawable/ic_widget"
+            android:label="Currency"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_currency_metadata"/>
+        </receiver>
+
+        <service android:name=".presentation.service.app_widget_remote_views.AppWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+    </application>
+
+</manifest>

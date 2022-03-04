@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ValuteMonitorWidget</string>
+    <string name="configure">Configure</string>
+    <string name="configure_2">Configure 2</string>
+    <string name="usd">USD</string>
+    <string name="semicolon">:</string>
+    <string name="rub">RUB</string>
+    <string name="_1">1</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/currency_widget_config">
+
+    <TextView
+        android:id="@+id/charCode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="@string/usd" />
+
+    <TextView
+        android:id="@+id/semicolon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/charCode1"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="@string/semicolon" />
+
+    <TextView
+        android:id="@+id/charCode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/semicolon"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="@string/rub" />
+
+    <TextView
+        android:id="@+id/value1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/charCode1"
+        android:layout_alignStart="@+id/charCode1"
+        android:layout_alignEnd="@+id/charCode1"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="@string/_1" />
+
+
+    <TextView
+        android:id="@+id/value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/charCode2"
+        android:layout_alignStart="@id/charCode2"
+        android:layout_alignEnd="@+id/charCode2"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        tools:text="119" />
+
+</RelativeLayout>
